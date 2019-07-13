@@ -28,3 +28,16 @@ class Guitar {
     return `Please enter correct format! string(1-6),[fret(0-2)] 0 means open string`;
   }
 }
+class Bass extends Guitar {
+  constructor(strings = ["E", "A", "D", "G"], fret = [0, 1, 2, 3, 4]) {
+    super(strings, fret);
+    this.notes = {
+      0: this.strings,
+      1: ["F", "C", "G#", "D#", "A#", "F"],
+      2: ["F#", "C#", "A", "E", "B", "F#"]
+    };
+  }
+}
+
+const bass = new Bass();
+const guitar = new Guitar();
