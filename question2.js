@@ -20,8 +20,8 @@ class Guitar {
   }
   playNote(string, fret = 0) {
     //   if fret is not provided, defaults to 0 (open string)
-    let stringIndex = string - 1;
-    let isPartOfStrings = this.strings.length >= string;
+    const stringIndex = string - 1;
+    const isPartOfStrings = this.strings.length >= string;
     if (string && isPartOfStrings) {
       return `Note played: ${this.notes[fret][stringIndex]}`;
     }
@@ -43,6 +43,7 @@ class Bass extends Guitar {
 
 const bass = new Bass();
 const guitar = new Guitar();
+
 console.log(bass.playNote(2));
 console.log(bass.playNote(9));
 console.log(guitar.playNote(7));
