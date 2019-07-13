@@ -25,7 +25,9 @@ class Guitar {
     if (string && isPartOfStrings) {
       return `Note played: ${this.notes[fret][stringIndex]}`;
     }
-    return `Please enter correct format! string(1-6),[fret(0-2)] 0 means open string`;
+    return `Please enter correct format! string(1-${
+      this.strings.length
+    }),[fret(0-2)] 0 means open string`;
   }
 }
 class Bass extends Guitar {
@@ -41,3 +43,7 @@ class Bass extends Guitar {
 
 const bass = new Bass();
 const guitar = new Guitar();
+console.log(bass.playNote(2));
+console.log(bass.playNote(9));
+console.log(guitar.playNote(7));
+console.log(guitar.playNote(6));
