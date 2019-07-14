@@ -41,6 +41,7 @@ class App extends React.Component {
     return result
   };
   handleClick=e=>{
+    e.preventDefault();
     const {userInput,vowelCount,lineCount,wordCount}=this.state
     const resultInput=this.countWords(userInput,Number(vowelCount),Number(lineCount),Number(wordCount))
     this.setState({resultInput})
@@ -49,9 +50,8 @@ class App extends React.Component {
     const { userInput,resultInput,vowelCount,lineCount,wordCount } = this.state;
     return (
       <div className="App">
-        <InputBox vowelCount={vowelCount} lineCount={lineCount} wordCount={wordCount} handleChange={this.handleChange}/>
         <TextBox userInput={userInput} handleChange={this.handleChange} />
-        <Button handleClick={this.handleClick}/>
+        <InputBox vowelCount={vowelCount} lineCount={lineCount} wordCount={wordCount} handleChange={this.handleChange} handleClick={this.handleClick}/>
         <TextBox userInput={resultInput} disabled />
       </div>
     );
