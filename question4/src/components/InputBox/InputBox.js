@@ -5,7 +5,6 @@ const InputBox = ({vowelCount,lineCount,wordCount,handleChange,handleClick}) => 
         <div>
         <form>
         <label htmlFor='wordCount'>Count Every 
-
         <input required type='number' id='wordCount'name='wordCount'value={wordCount} onChange={handleChange}/>
         Word
         </label>
