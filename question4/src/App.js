@@ -2,32 +2,38 @@ import React from "react";
 import "./App.css";
 import {moreThanVowelCount} from './helper'
 // components
+import InputBox from'./components/InputBox/InputBox';
 import TextBox from "./components/TextBox/TextBox";
 import Button from "./components/Buttons/Button";
 
 class App extends React.Component {
   state = {
-    userInput: ""
+    userInput: "",
+    resultInput:"",
+    vowelCount:'',
+    lineCount:'',
+    wordCount:''
   };
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
   countWords = (
-    userInput = "how are. you?\nI'm very very good!",
-    vowelCount=2,
-    lineCount = 1,
-    wordCount=3
+    userInput,
+    vowelCount,
+    lineCount,
+    wordCount,
   ) => {
     // replace symbols with empty string
-    let regexStr=userInput.replace(/[.,!?"]/g,'')
+    const regexStr=userInput.replace(/[.,!?"]/g,'')
+
     // break into sentences
-    let sentences = regexStr.split("\n");
+    const sentences = regexStr.split("\n");
     // result cache
-    let result = [];
+    const result = [];
     // for each lineCount specified, loop through each sentence to find the matched
     for (let i = lineCount - 1; i < sentences.length; i = i + lineCount) {
-      let sentence = sentences[i].split(" ");
-      let matchedWord = sentence.filter((word, i) => (i + 1) % wordCount === 0 && moreThanVowelCount(word,vowelCount))
+      const sentence = sentences[i].split(" ");
+      const matchedWord = sentence.filter((word, i) => (i + 1) % wordCount === 0 && moreThanVowelCount(word,vowelCount))
       if(matchedWord.length){
         result.push(matchedWord)
       }      
@@ -35,13 +41,15 @@ class App extends React.Component {
     return result
   };
   handleClick=e=>{
-    this.countWords()
+    const {userInput,vowelCount,lineCount,wordCount}=this.state
+    const resultInput=this.countWords(userInput,Number(vowelCount),Number(lineCount),Number(wordCount))
+    this.setState({resultInput})
   }
   render() {
-    const { userInput } = this.state;
-    const resultInput = this.countWords();
+    const { userInput,resultInput,vowelCount,lineCount,wordCount } = this.state;
     return (
       <div className="App">
+        <InputBox vowelCount={vowelCount} lineCount={lineCount} wordCount={wordCount} handleChange={this.handleChange}/>
         <TextBox userInput={userInput} handleChange={this.handleChange} />
         <Button handleClick={this.handleClick}/>
         <TextBox userInput={resultInput} disabled />

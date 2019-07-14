@@ -5,7 +5,7 @@ const TextBox = ({ userInput, handleChange, disabled }) => {
     <form action="">
       <textarea
         name="userInput"
-        id=""
+        id="userInput"
         cols="30"
         rows="10"
         value={userInput}
