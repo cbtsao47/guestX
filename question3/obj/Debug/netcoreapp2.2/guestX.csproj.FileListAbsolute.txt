@@ -1,0 +1,4 @@
+F:\LambdaSchool\guestX\question3\obj\Debug\netcoreapp2.2\guestX.csprojAssemblyReference.cache
+F:\LambdaSchool\guestX\question3\obj\Debug\netcoreapp2.2\guestX.csproj.CoreCompileInputs.cache
+F:\LambdaSchool\guestX\question3\obj\Debug\netcoreapp2.2\guestX.AssemblyInfoInputs.cache
+F:\LambdaSchool\guestX\question3\obj\Debug\netcoreapp2.2\guestX.AssemblyInfo.cs

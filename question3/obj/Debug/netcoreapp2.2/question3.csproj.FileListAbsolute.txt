@@ -1,0 +1,11 @@
+F:\LambdaSchool\guestX\question3\obj\Debug\netcoreapp2.2\question3.csprojAssemblyReference.cache
+F:\LambdaSchool\guestX\question3\obj\Debug\netcoreapp2.2\question3.csproj.CoreCompileInputs.cache
+F:\LambdaSchool\guestX\question3\obj\Debug\netcoreapp2.2\question3.AssemblyInfoInputs.cache
+F:\LambdaSchool\guestX\question3\obj\Debug\netcoreapp2.2\question3.AssemblyInfo.cs
+F:\LambdaSchool\guestX\question3\bin\Debug\netcoreapp2.2\question3.deps.json
+F:\LambdaSchool\guestX\question3\bin\Debug\netcoreapp2.2\question3.runtimeconfig.json
+F:\LambdaSchool\guestX\question3\bin\Debug\netcoreapp2.2\question3.runtimeconfig.dev.json
+F:\LambdaSchool\guestX\question3\bin\Debug\netcoreapp2.2\question3.dll
+F:\LambdaSchool\guestX\question3\bin\Debug\netcoreapp2.2\question3.pdb
+F:\LambdaSchool\guestX\question3\obj\Debug\netcoreapp2.2\question3.dll
+F:\LambdaSchool\guestX\question3\obj\Debug\netcoreapp2.2\question3.pdb
