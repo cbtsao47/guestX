@@ -1,0 +1,54 @@
+.inputbox {
+  padding: 1rem;
+  line-height: 2;
+  font-size: 2.5rem;
+  padding: 0 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 400px) {
+  .inputbox {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 800px) {
+  .inputbox-form {
+    display: flex;
+  }
+}
+.inputbox-form {
+  display: flex;
+  flex-direction: column;
+}
+.inputbox-input {
+  border: none;
+  text-align: center;
+  margin: 0 1rem;
+  font-weight: bold;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.inputbox-button {
+  margin-top: 2rem;
+  background: #30555d;
+  border: none;
+  border-radius: 50px;
+  padding: 1rem 2rem;
+  color: #55c6d6;
+  outline: 0;
+  cursor: pointer;
+}
+.inputbox-button:hover {
+  color: #30555d;
+  background: #55c6d6;
+}
+.inputbox-button:active {
+  transform: translateY(10px);
+}

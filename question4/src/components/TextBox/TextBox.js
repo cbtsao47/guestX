@@ -1,9 +1,15 @@
 import React from "react";
-
-const TextBox = ({ userInput, handleChange, disabled }) => {
+import "./TextBox.css";
+const TextBox = ({
+  userInput,
+  handleChange,
+  disabled,
+  placeholder = "No Match"
+}) => {
   return (
-    <form action="">
+    <form action="" className="text-box-wrapper">
       <textarea
+        className="text-box-textarea"
         name="userInput"
         id="userInput"
         cols="30"
@@ -11,6 +17,7 @@ const TextBox = ({ userInput, handleChange, disabled }) => {
         value={userInput}
         onChange={handleChange}
         disabled={disabled}
+        placeholder={placeholder}
       />
     </form>
   );
