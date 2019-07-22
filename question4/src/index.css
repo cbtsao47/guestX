@@ -16,9 +16,11 @@ html {
   box-sizing: inherit;
 }
 
-html,
 body,
-#root,
-#root > div {
+html,
+#root {
   height: 100%;
+}
+body {
+  background: #202124;
 }
