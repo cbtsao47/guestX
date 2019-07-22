@@ -7,7 +7,12 @@ namespace question3
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine(string.Join(", ", FindDuplicates(new int[] { 3, 1, 1, 3 }).ToArray()));
+            Console.Write("Enter a series of numbers separated by commas: ");
+            string numbersInput = Console.ReadLine();
+            string[] stringArr = numbersInput.Split(',');
+            int[] numbersArr = Array.ConvertAll(stringArr, int.Parse);
+            Console.WriteLine("Repeated numbers: ");
+            Console.WriteLine(string.Join(", ", FindDuplicates(numbersArr).ToArray()));
         }
         public static List<int> FindDuplicates(int[] numberArr)
         {
