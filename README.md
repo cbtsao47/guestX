@@ -1,4 +1,4 @@
-##This is the project repository for GuestX
+## This is the project repository for GuestX
 
 [Question 1](https://github.com/cbtsao47/guestX/blob/master/question1/question1.md)
 
